@@ -2,6 +2,10 @@
 
 module TreeSitterLive
   class Routes < Hanami::Routes
-    # Add your routes here. See https://guides.hanamirb.org/routing/overview/ for details.
+    slice :playground, at: "/" do
+      root to: "home.show"
+
+      resources :grammars
+    end
   end
 end

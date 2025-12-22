@@ -1,0 +1,26 @@
+<h1>Grammars</h1>
+
+<%= link_to "Create a new grammar", routes.path(:new_grammar) %>
+
+<% if grammars.any? %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Language</th>
+        <th>Repository URL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% grammars.each do |grammar| %>
+        <tr>
+          <td><%= grammar.name %></td>
+          <td><%= grammar.description %></td>
+          <td><%= link_to grammar.repository_url, grammar.repository_url, target: "_blank" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>No grammars found. <%= link_to "Create a new grammar", routes.path(:new_grammar) %></p>
+<% end %>

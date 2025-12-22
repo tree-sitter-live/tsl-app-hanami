@@ -6,6 +6,6 @@ module TreeSitterLive
   Types = Dry.Types(default: :strict)
 
   module Types
-    # Define your custom types here
+    Url = String.constrained(format: URI::DEFAULT_PARSER.make_regexp(%w[http https]))
   end
 end

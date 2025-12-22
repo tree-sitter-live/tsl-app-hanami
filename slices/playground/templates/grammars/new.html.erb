@@ -1,0 +1,14 @@
+<h1>New Grammar</h1>
+
+<%= form_for(:grammar, routes.path(:grammars)) do |form| %>
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required autocomplete="off" placeholder="Enter grammar name, e.g. 'Ruby'">
+
+  <label for="description">Description</label>
+  <textarea id="description" name="description" placeholder="Enter grammar description, e.g. 'Ruby grammar for tree-sitter'"></textarea>
+
+  <label for="repository_url">Repository URL</label>
+  <input type="text" id="repository_url" name="repository_url" required autocomplete="off" placeholder="Enter repository URL, e.g. 'https://github.com/tree-sitter/tree-sitter-ruby'">
+
+  <button type="submit">Create Grammar</button>
+<% end %>

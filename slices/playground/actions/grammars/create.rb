@@ -1,0 +1,29 @@
+# frozen_string_literal: true
+
+module Playground
+  module Actions
+    module Grammars
+      class Create < Playground::Action
+        include Deps[
+          repo: "repos.grammar_repo",
+          index_view: "views.grammars.index"
+        ]
+
+        params do
+          required(:name).filled(:string)
+          optional(:description).filled(:string)
+          required(:repository_url).filled(::TreeSitterLive::Types::Url)
+        end
+
+        def handle(request, response)
+          if request.params.valid?
+            repo.create(request.params)
+            response.redirect(routes.path(:grammars))
+          else
+            pp request.params.errors
+          end
+        end
+      end
+    end
+  end
+end

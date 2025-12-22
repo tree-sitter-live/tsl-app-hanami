@@ -4,12 +4,15 @@
 #
 # To load the seeds, run `hanami db seed`. Seeds are also loaded as part of `hanami db prepare`.
 
-# For example, if you have appropriate repos available:
-#
-#   category_repo = Hanami.app["repos.category_repo"]
-#   category_repo.create(title: "General")
-#
-# Alternatively, you can use relations directly:
-#
-#   categories = Hanami.app["relations.categories"]
-#   categories.insert(title: "General")
+grammar_repo = Playground::Slice["repos.grammar_repo"]
+grammar_repo.create([
+  {
+    name: "Ruby",
+    repository_url: "https://github.com/tree-sitter/tree-sitter-ruby",
+    description: "Ruby grammar for tree-sitter"
+  },
+  {
+    name: "JavaScript",
+    repository_url: "https://github.com/tree-sitter/tree-sitter-javascript",
+    description: "JavaScript grammar for tree-sitter"
+  }])
