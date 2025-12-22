@@ -17,6 +17,12 @@ gem "rake"
 gem "sqlite3"
 
 group :development do
+  gem "rubocop", require: false
+  gem "rubocop-capybara", require: false
+  gem "rubocop-performance", require: false
+  gem "rubocop-rake", require: false
+  gem "rubocop-rspec", require: false
+  gem "rubocop-sequel", require: false
   gem "hanami-webconsole", "~> 2.3.0"
 end
 
