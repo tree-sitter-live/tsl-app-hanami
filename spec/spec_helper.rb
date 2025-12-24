@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+Bundler.require(:tools)
+
 require "pathname"
 SPEC_ROOT = Pathname(__dir__).realpath.freeze
 

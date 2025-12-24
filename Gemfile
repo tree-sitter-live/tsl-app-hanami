@@ -46,3 +46,10 @@ group :test do
   gem "capybara"
   gem "rack-test"
 end
+
+group :tools do
+  gem "amazing_print", "~> 2.0"
+  gem "debug", "~> 1.10"
+  gem "irb-kit", "~> 1.1"
+  gem "repl_type_completor", "~> 0.1"
+end

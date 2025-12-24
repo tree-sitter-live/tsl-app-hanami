@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+Bundler.require(:tools) if ENV.fetch("HANAMI_ENV", "development") == "development"
+
 #
 # Environment and port
 #
