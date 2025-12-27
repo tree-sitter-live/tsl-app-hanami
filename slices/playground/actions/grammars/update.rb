@@ -4,8 +4,7 @@ module Playground
   module Actions
     module Grammars
       class Update < Playground::Action
-        def handle(request, response)
-        end
+        def handle(request, response); end
       end
     end
   end

@@ -1,55 +1,55 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "hanami", "~> 2.3.0"
-gem "hanami-assets", "~> 2.3.0"
-gem "hanami-controller", "~> 2.3.0"
-gem "hanami-db", "~> 2.3.0"
-gem "hanami-router", "~> 2.3.0"
-gem "hanami-validations", "~> 2.3.0"
-gem "hanami-view", "~> 2.3.0"
+gem 'hanami', '~> 2.3.0'
+gem 'hanami-assets', '~> 2.3.0'
+gem 'hanami-controller', '~> 2.3.0'
+gem 'hanami-db', '~> 2.3.0'
+gem 'hanami-router', '~> 2.3.0'
+gem 'hanami-validations', '~> 2.3.0'
+gem 'hanami-view', '~> 2.3.0'
 
-gem "dry-types", "~> 1.7"
-gem "dry-operation", ">= 1.0.1"
-gem "puma"
-gem "rake"
-gem "sqlite3"
+gem 'dry-operation', '>= 1.0.1'
+gem 'dry-types', '~> 1.7'
+gem 'puma'
+gem 'rake'
+gem 'sqlite3'
 
 group :development do
-  gem "rubocop", require: false
-  gem "rubocop-capybara", require: false
-  gem "rubocop-performance", require: false
-  gem "rubocop-rake", require: false
-  gem "rubocop-rspec", require: false
-  gem "rubocop-sequel", require: false
-  gem "hanami-webconsole", "~> 2.3.0"
+  gem 'hanami-webconsole', '~> 2.3.0'
+  gem 'rubocop', require: false
+  gem 'rubocop-capybara', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rake', require: false
+  gem 'rubocop-rspec', require: false
+  gem 'rubocop-sequel', require: false
 end
 
 group :development, :test do
-  gem "dotenv"
+  gem 'dotenv'
 end
 
 group :cli, :development do
-  gem "hanami-reloader", "~> 2.3.0"
+  gem 'hanami-reloader', '~> 2.3.0'
 end
 
 group :cli, :development, :test do
-  gem "hanami-rspec", "~> 2.3.0"
+  gem 'hanami-rspec', '~> 2.3.0'
 end
 
 group :test do
   # Database
-  gem "database_cleaner-sequel"
+  gem 'database_cleaner-sequel'
 
   # Web integration
-  gem "capybara"
-  gem "rack-test"
+  gem 'capybara'
+  gem 'rack-test'
 end
 
 group :tools do
-  gem "amazing_print", "~> 2.0"
-  gem "debug", "~> 1.10"
-  gem "irb-kit", "~> 1.1"
-  gem "repl_type_completor", "~> 0.1"
+  gem 'amazing_print', '~> 2.0'
+  gem 'debug', '~> 1.10'
+  gem 'irb-kit', '~> 1.1'
+  gem 'repl_type_completor', '~> 0.1'
 end

@@ -1,20 +1,20 @@
 # frozen_string_literal: true
 
-Bundler.require(:tools) if ENV.fetch("HANAMI_ENV", "development") == "development"
+Bundler.require(:tools) if ENV.fetch('HANAMI_ENV', 'development') == 'development'
 
 #
 # Environment and port
 #
-port ENV.fetch("HANAMI_PORT", 2300)
-environment ENV.fetch("HANAMI_ENV", "development")
+port ENV.fetch('HANAMI_PORT', 2300)
+environment ENV.fetch('HANAMI_ENV', 'development')
 
 #
 # Threads within each Puma/Ruby process (aka worker)
 #
 
 # Configure the minimum and maximum number of threads to use to answer requests.
-max_threads_count = ENV.fetch("HANAMI_MAX_THREADS", 5)
-min_threads_count = ENV.fetch("HANAMI_MIN_THREADS") { max_threads_count }
+max_threads_count = ENV.fetch('HANAMI_MAX_THREADS', 5)
+min_threads_count = ENV.fetch('HANAMI_MIN_THREADS') { max_threads_count }
 
 threads min_threads_count, max_threads_count
 
@@ -22,7 +22,7 @@ threads min_threads_count, max_threads_count
 # Workers (aka Puma/Ruby processes)
 #
 
-puma_concurrency = Integer(ENV.fetch("HANAMI_WEB_CONCURRENCY", 0))
+puma_concurrency = Integer(ENV.fetch('HANAMI_WEB_CONCURRENCY', 0))
 puma_cluster_mode = puma_concurrency > 1
 
 # How many worker (Puma/Ruby) processes to run.

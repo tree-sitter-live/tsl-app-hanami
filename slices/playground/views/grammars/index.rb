@@ -4,7 +4,7 @@ module Playground
   module Views
     module Grammars
       class Index < Playground::View
-        include Deps["repos.grammar_repo"]
+        include Deps['repos.grammar_repo']
 
         expose :grammars do
           grammar_repo.all

@@ -5,8 +5,9 @@ module Playground
     module Grammars
       class Create < Playground::Action
         include Deps[
-          repo: "repos.grammar_repo",
-          index_view: "views.grammars.index"
+          repo: 'repos.grammar_repo',
+          new_view: 'views.grammars.new',
+          index_view: 'views.grammars.index'
         ]
 
         params do
@@ -20,7 +21,7 @@ module Playground
             repo.create(request.params)
             response.redirect(routes.path(:grammars))
           else
-            pp request.params.errors
+            response.render(new_view, errors: request.params.errors.to_h)
           end
         end
       end

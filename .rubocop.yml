@@ -12,9 +12,3 @@ plugins:
   - rubocop-rake
   - rubocop-rspec
   - rubocop-sequel
-
-Style/StringLiterals:
-  EnforcedStyle: double_quotes
-
-Style/Documentation:
-  Enabled: false
