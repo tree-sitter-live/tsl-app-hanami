@@ -5,7 +5,7 @@ ROM::SQL.migration do
     create_table :grammars do
       primary_key :id
 
-      column :name, :string, null: false, unique: true
+      column :name, :string, null: false, index: { unique: true }
       column :description, :text
       column :repository_url, :string, null: false
 
