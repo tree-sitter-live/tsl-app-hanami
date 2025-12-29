@@ -12,3 +12,6 @@ plugins:
   - rubocop-rake
   - rubocop-rspec
   - rubocop-sequel
+
+Style/Documentation:
+  Enabled: false
