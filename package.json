@@ -4,6 +4,7 @@
   "type": "module",
   "dependencies": {
     "@picocss/pico": "^2.1.1",
-    "hanami-assets": "^2.3.0"
+    "hanami-assets": "^2.3.0",
+    "htmx.org": "^2.0.8"
   }
 }
