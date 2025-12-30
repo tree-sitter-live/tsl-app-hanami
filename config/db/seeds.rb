@@ -6,7 +6,7 @@
 #
 # To load the seeds, run `hanami db seed`. Seeds are also loaded as part of `hanami db prepare`.
 
-grammar_repo = Playground::Slice['repos.grammar_repo']
+grammar_repo = Hanami.app['repos.grammar_repo']
 grammar_repo.create([
                       {
                         name: 'Ruby',
