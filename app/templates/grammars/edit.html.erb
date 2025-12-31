@@ -1,1 +1,14 @@
-<h1>Playground::Views::Grammars::Edit</h1>
+<h1>Editing <%= grammar.name %></h1>
+
+<%= form_for(:grammar, routes.path(:grammar, id: grammar.id), method: :patch) do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :description %>
+  <%= form.text_area :description %>
+
+  <%= form.label :repository_url %>
+  <%= form.text_field :repository_url %>
+
+  <%= form.submit "Update grammar" %>
+<% end %>

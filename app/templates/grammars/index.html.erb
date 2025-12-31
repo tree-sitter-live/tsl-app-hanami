@@ -9,14 +9,18 @@
         <th>Name</th>
         <th>Language</th>
         <th>Repository URL</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
       <% grammars.each do |grammar| %>
         <tr>
-          <td><%= grammar.name %></td>
+          <td><%= link_to grammar.name, routes.path(:grammar, id: grammar.id) %></td>
           <td><%= grammar.description %></td>
           <td><%= link_to grammar.repository_url, grammar.repository_url, target: "_blank" %></td>
+          <td>
+            <%= link_to "Edit", routes.path(:edit_grammar, id: grammar.id) %>
+          </td>
         </tr>
       <% end %>
     </tbody>

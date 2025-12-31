@@ -2,7 +2,7 @@
 
 module TreeSitterLive
   module Relations
-    class Grammars < Playground::DB::Relation
+    class Grammars < TreeSitterLive::DB::Relation
       schema :grammars, infer: true
     end
   end
