@@ -1,2 +1,4 @@
 web: bundle exec hanami server
+redis: redis-server
+worker: bundle exec sidekiq -r ./config/sidekiq.rb
 assets: bundle exec hanami assets watch

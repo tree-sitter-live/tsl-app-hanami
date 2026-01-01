@@ -51,6 +51,8 @@ RSpec.configure do |config|
   # --seed 1234
   config.order = :random
 
+  # config.before { Sidekiq.redis(&:flushdb) }
+
   # Seed global randomization in this process using the `--seed` CLI option.
   # This allows you to use `--seed` to deterministically reproduce test failures
   # related to randomization by passing the same `--seed` value as the one that

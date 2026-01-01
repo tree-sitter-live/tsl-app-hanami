@@ -16,6 +16,9 @@ gem 'puma'
 gem 'rake'
 gem 'sqlite3'
 
+gem 'sidekiq'
+gem 'sidekiq-scheduler'
+
 group :development do
   gem 'hanami-webconsole', '~> 2.3.0'
   gem 'rubocop', require: false
