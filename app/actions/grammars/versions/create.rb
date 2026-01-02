@@ -7,7 +7,6 @@ module TreeSitterLive
         class Create < TreeSitterLive::Action
           include Deps[
             repo: 'repos.version_repo',
-            new_view: 'views.grammars.versions.new',
             index_view: 'views.grammars.versions.index'
           ]
 
@@ -21,8 +20,8 @@ module TreeSitterLive
               repo.create(request.params)
               response.redirect(routes.path(:grammar_versions, grammar_id: request.params[:grammar_id]))
             else
-              response.status = 422
-              response.render(new_view, errors: request.params.errors.to_h)
+              response.status = :unprocessable_entity
+              response.render(view, errors: request.params.errors.to_h)
             end
           end
         end

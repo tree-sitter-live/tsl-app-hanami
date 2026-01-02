@@ -6,8 +6,7 @@ module TreeSitterLive
       class Update < TreeSitterLive::Action
         include Deps[
           repo: 'repos.grammar_repo',
-          show_view: 'views.grammars.show',
-          edit_view: 'views.grammars.edit'
+          show_view: 'views.grammars.show'
         ]
 
         params do
@@ -30,7 +29,7 @@ module TreeSitterLive
             response.render(show_view, id: grammar.id)
           else
             response.status = :unprocessable_entity
-            response.render(edit_view, id: grammar.id, errors: request.params.errors.to_h)
+            response.render(view, id: grammar.id, errors: request.params.errors.to_h)
           end
         end
       end
